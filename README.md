@@ -16,5 +16,5 @@ This repository is an Azure Webapp to generate AVS ARM Deployment Templates.  Th
 The app is now avabile at http://127.0.0.1:5000  
 
 ### Azure
-If run as a webapp in azure the env variables can be set in the appication setting.  The Startup Command must be changed to  
+If run as a webapp in azure the env variables can be set in the Appication Settings.  The Startup Command must be changed to  
 `gunicorn --bind 0.0.0.0:8000 main:app`
