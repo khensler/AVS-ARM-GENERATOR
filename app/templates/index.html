@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="Body Content">
+	<h1>Welcome to the AVS ARM Template Generator</h1>
+	<h4>This application will create an arm template and push it to your Azure Portal for deployment<br>Please complete the form below</h4>
+</div>
+<div id="templateinfo">
+<form action="/" method="post" novalidate>
+	{{ form.hidden_tag() }}
+	<table>
+		<tr><th></th><th></th></tr>
+		<tr><td>Subscription ID</td><td>{{ form.SubOfVnetGW }}</td></tr>
+		<tr><td>Name of the Private Cloud</td><td>{{ form.PrivateCloudName }}</td></tr>
+		<tr><td>Private Cloud Address Space (X.X.X.X/22)</td><td>{{ form.PrivateCloudAddressSpace }}</td></tr>
+		<tr><td>Resouce Group Name of vNet Gateway for ExR Connection</td><td>{{ form.vNetGWRG }}</td></tr>
+		<tr><td>EXISTING vNet Name to Connect the new vNet Gateway </td><td>{{ form.vNetGWvNet }}</td></tr>
+		<tr><td>Name of new vNet Gateway</td><td>{{ form.GatewayName }}</td></tr>
+		<tr><td>Express Route Auth Key for Global Reach Connection</td><td>{{ form.OnPremExpressRouteAuthorizationKey }}</td></tr>
+		<tr><td>Express Route ID for Global Reach Connection</td><td>{{ form.OnPremExpressRouteId }}</td></tr>
+		<!-- <tr><td>Use AVS Internet Connection (Enabled/Disabled)</td><td>{{ form.InternetStatus }}</td></tr> -->
+	</table>
+	<p>{{ form.submit() }}</p>
+</form>
+</div>
+{% endblock %}
