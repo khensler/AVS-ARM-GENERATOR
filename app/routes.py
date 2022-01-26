@@ -32,7 +32,6 @@ def index():
             json.dump(data,f)
         connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
         blobstorename = os.getenv('AZURE_BLOB_STORE_NAME')
-        print("Connect String: {string}".format(string=connect_str))
         blob_service_client = BlobServiceClient.from_connection_string(connect_str)
         blob_client = blob_service_client.get_blob_client(container="templates", blob="{fname}.json".format(fname=fname))        
         with open("app\static\{fname}.json".format(fname=fname), "rb") as data:
