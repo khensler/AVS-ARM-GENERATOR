@@ -1,5 +1,8 @@
 # AVS ARM Template Generator
 This repository is an Azure Webapp to generate AVS ARM Deployment Templates.  The app is a Flask webapp for Python.  This can be run anywhere with python and the required modules installed.  Azure blob storage is used to store the resulant json files.  
+## Access
+A copy of the application may be running at https://avs-arm-generator.azurewebsites.net/
+
 ## Usage
 ### Local
 1. Clone the repo  
