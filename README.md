@@ -8,7 +8,7 @@ This repository is an Azure Webapp to generate AVS ARM Deployment Templates.  Th
 3. Active the virtual enviornment.  This is dependent on your envionrment  
 4. Install the required modules  
 `python -m pip install -r requirements.txt`
-5. Set the AZURE_STORAGE_CONNECTION_STRING envionrment variable to your blob storage connection string
+5. Set the AZURE_STORAGE_CONNECTION_STRING and the AZURE_BLOB_STORE_NAME envionrment variables to your blob storage connection string and blob store name
 6. Run the application  
 `python -m flask run`
 
