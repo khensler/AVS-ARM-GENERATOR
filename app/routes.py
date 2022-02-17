@@ -36,7 +36,7 @@ def index():
         blob_client = blob_service_client.get_blob_client(container="templates", blob="{fname}.json".format(fname=fname))        
         #with open("app\static\{fname}.json".format(fname=fname), "rb") as data:
         #    blob_client.upload_blob(data)
-        blob_client.upload_blob(data)
+        blob_client.upload_blob(json.dumps(data))
         #os.remove("app\static\{fname}.json".format(fname=fname))
         link = urllib.parse.quote("https://{blobstorename}.blob.core.windows.net/templates/{fname}.json".format(blobstorename=blobstorename, fname=fname), safe='')
         flash('<a href="https://portal.azure.com/#create/Microsoft.Template/uri/{link}" target="_blank">Click Here To Deploy https://portal.azure.com/#create/Microsoft.Template/uri/{link}</a>'.format(link=link))
